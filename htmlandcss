@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Web Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Web Page</h1>
+    <img src="logo.png" alt="Logo" class="logo">
+  </header>
+  <p class="date">Today's date is: <span id="current-date"></span></p>
+  <div class="images-container">
+    <div class="image-item">
+      <img src="image1.jpg" alt="Image 1">
+      <p>Caption for Image 1</p>
+    </div>
+    <div class="image-item">
+      <img src="image2.jpg" alt="Image 2">
+      <p>Caption for Image 2</p>
+    </div>
+    <div class="image-item">
+      <img src="image3.jpg" alt="Image 3">
+      <p>Caption for Image 3</p>
+    </div>
+  </div>
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      title="Embedded Video"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <script>
+    // Display the current date
+    const currentDate = new Date().toLocaleDateString();
+    document.getElementById('current-date').textContent = currentDate;
+  </script>
+</body>
+</html>
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.date {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.image-item {
+  margin: 10px;
+}
+
+.image-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  width: 80%;
+  max-width: 600px;
+  height: 300px;
+  border: none;
+  margin: 20px auto;
+}
